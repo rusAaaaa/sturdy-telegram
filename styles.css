@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Doto:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');
+
+html,
+body {
+    font-family: "Barrio", system-ui;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #192b4f, #090a0e 60%, #000 100%);
+    overflow: hidden;
+}
+
+/* Контейнер для единой обводки */
+.container {
+    padding: 20px;
+    border: 3px solid rgba(255, 0, 150, 0.6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(255, 0, 150, 0.5);
+    animation: gradientShift 6s ease infinite, glow 3s ease-in-out infinite alternate;
+}
+
+/* Внешняя обводка для всего блока */
+.outer-container {
+    padding: 25px;
+    border: 5px solid rgba(255, 0, 150, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(255, 0, 150, 0.6), 0px 0px 60px rgba(0, 150, 255, 0.4);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Основной блок заголовка */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Анимация логотипа */
+.header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 150, 0.8));
+    animation: pulse 1.5s infinite alternate;
+    border-radius: 50%;
+    outline: 2px solid rgba(255, 0, 150, 0.5);
+    outline-offset: 5px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 10px rgba(255, 0, 150, 0.7));
+    }
+
+    to {
+        transform: scale(1.1);
+        filter: drop-shadow(0px 0px 20px rgba(255, 0, 150, 1));
+    }
+}
+
+/* Основной стиль для текста-счёта */
+.score {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    user-select: none;
+    color: #ff4c8d;
+    /* Ярко-розовый цвет */
+    text-shadow: 2px 2px 25px rgba(255, 0, 150, 0.8), 2px -2px 25px rgba(0, 150, 255, 0.8), 0px 0px 20px rgba(255, 255, 255, 0.8);
+    animation: flicker 2s infinite alternate;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Цвета для разных состояний счетчика */
+.score.color-1 {
+    color: #ff006e;
+    /* Более насыщенный розовый */
+    text-shadow: 2px 2px 30px rgba(255, 0, 100, 1), 2px -2px 30px rgba(0, 200, 255, 0.9), 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+.score.color-2 {
+    color: #00d9ff;
+    /* Яркий голубой */
+    text-shadow: 2px 2px 30px rgba(0, 255, 150, 1), 2px -2px 30px rgba(255, 0, 255, 0.9), 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+.score.color-3 {
+    color: #ff80ff;
+    /* Нежно-фиолетовый */
+    text-shadow: 2px 2px 30px rgba(255, 0, 150, 1), 2px -2px 30px rgba(0, 150, 255, 0.9), 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+/* Эффект мерцания */
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+
+/* Эффект мерцания */
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+/* Цвета для разных состояний счетчика */
+.score.color-1 {
+    color: hsl(200, 100%, 70%);
+    text-shadow: 2px 2px 15px rgba(0, 150, 255, 0.8), 2px -2px 15px rgba(255, 255, 0, 0.6);
+}
+
+.score.color-2 {
+    color: hsl(100, 80%, 60%);
+    text-shadow: 2px 2px 15px rgba(0, 255, 150, 0.8), 2px -2px 15px rgba(255, 0, 150, 0.6);
+}
+
+.score.color-3 {
+    color: hsl(300, 100%, 80%);
+    text-shadow: 2px 2px 15px rgba(255, 0, 150, 0.8), 2px -2px 15px rgba(0, 150, 255, 0.6);
+}
+
+.circle {
+    position: relative;
+    perspective: 1000px;
+}
+
+.circle img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 150, 255, 0.2));
+    box-shadow: 0px 0px 30px 15px rgba(255, 0, 150, 0.8), 0px 0px 60px 25px rgba(0, 150, 255, 0.5), inset 0px 0px 20px rgba(255, 255, 255, 0.1);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+    transform: scale(1) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg));
+}
+
+.circle img:hover {
+    opacity: 0.9;
+    transform: scale(1.05) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg));
+    box-shadow: 0px 0px 40px 20px rgba(255, 0, 150, 0.9), 0px 0px 80px 35px rgba(0, 150, 255, 0.7), inset 0px 0px 25px rgba(255, 255, 255, 0.15);
+}
+
+.circle img:active {
+    transform: scale(0.98) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg));
+    box-shadow: 0px 0px 20px 10px rgba(255, 0, 150, 0.7), 0px 0px 40px 20px rgba(0, 150, 255, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation effect */
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0px 0px 30px 15px rgba(255, 0, 150, 0.8), 0px 0px 60px 25px rgba(0, 150, 255, 0.5), inset 0px 0px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0px 0px 40px 20px rgba(255, 0, 150, 1), 0px 0px 80px 35px rgba(0, 150, 255, 0.8), inset 0px 0px 25px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.circle img {
+    animation: glow 3s infinite ease-in-out;
+}
+
+
+/* Эффект неонового свечения */
+@keyframes neon-glow {
+
+    0%,
+    100% {
+        box-shadow: 0px 0px 20px rgba(255, 0, 150, 0.8), 0px 0px 40px rgba(0, 150, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0px 0px 30px rgba(255, 0, 150, 1), 0px 0px 60px rgba(0, 150, 255, 0.7);
+    }
+}
+
+/* Эффект для элемента "+1" */
+.plus-one {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(180deg, #ff00d4, #00f2ff, #ff4c4c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    user-select: none;
+    font-size: 24px;
+    white-space: nowrap;
+    opacity: 1;
+    animation: fadeUp 2s ease forwards;
+    text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
+    transform: translate(-50%, -50%);
+}
+
+.plus-one::before {
+    content: '+1';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+#reset {
+    font-family: "Barrio", system-ui;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s, box-shadow 0.4s;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    outline: 1px solid rgba(131, 19, 81, 0.6);
+    outline-offset: 4px;
+    animation: pulse 3s infinite alternate;
+    right: 20px;
+}
+
+#reset:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8), 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+#reset:active {
+    background-color: #ff0077;
+    transform: scale(1);
+    box-shadow: none;
+}
